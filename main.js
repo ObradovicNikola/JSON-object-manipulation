@@ -41,7 +41,7 @@ console.log(myObj.birth.getDay());
 document.getElementById("demo").innerHTML = myObj.age;
 
 // alternative method
-// parsing function
+// parsing function !BAD PRACTISE, never use functions with json objects
 let myObj = JSON.parse(person, function (key, value) {
     if (key == 'birth')
         return new Date(value);
